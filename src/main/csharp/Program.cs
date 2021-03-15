@@ -76,16 +76,27 @@ namespace java
             palavras.Add(new KeyValuePair <string, string>("objeto", "ob-je-to"));
             palavras.Add(new KeyValuePair <string, string>("desmentir", "des-men-tir"));
 
+            int countRightWords = 0;
 
             foreach(var palSep in palavras) {
+
                 var palavra = palSep.Key;
                 var split = syllable.word2syllables(palavra);
+                var spliString = string.Join("-", split.ToArray());
+
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine("Palavra: " + palavra);
-                Console.WriteLine("Separa automaticamente: " + string.Join("-", split.ToArray()));
+                Console.WriteLine("Separa automaticamente: " + spliString);
                 Console.WriteLine("Separação correta: " + palSep.Value);
                 Console.WriteLine("--------------------------------------------------\n");
+
+                if (spliString.Equals(palSep.Value)) {
+                    countRightWords ++;
+                }
             }
+
+            Console.WriteLine("Total de palavras: " + palavras.Count);
+            Console.WriteLine("Total separações certas: " + countRightWords);
         }
     }
 }
