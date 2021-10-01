@@ -28,6 +28,10 @@ And then, add the class to your Java project. The following code exemplifies the
  
  The test class also provides further examples.
 
+## License
+
+See the LICENSE file for license rights and limitations (GNU GPLv3).
+
 # syllable-pt (pt)
 
 Esse sistema separa sílabas de palavras em português e é baseado nos seguintes artigos e em algumas melhorias feitas por mim.
@@ -59,3 +63,6 @@ E então adicionar a única classe ao seu projeto Java. O seguinte código exemp
 
 A classe de teste fornece mais exemplos.
 
+## Licença
+
+Veja o arquivo LICENSE para os direitos e limitações (GNU GPLv3).
