@@ -369,7 +369,7 @@ public class SyllableTest {
         String[] splitResult1 = {"po","lí","ci","a"};
 
         ArrayList<String> split2 = s.word2syllables("sócio");
-        String[] splitResult2 = {"só","cio"}; // usado em pt-br
+        String[] splitResult2 = {"só","ci","o"}; // atualizado com a divisao CPLP
 
         ArrayList<String> split3 = s.word2syllables("democracia");
         String[] splitResult3 = {"de","mo","cra","ci","a"};
@@ -437,5 +437,15 @@ public class SyllableTest {
 
         assertArrayEquals(splitResult1, split1.toArray());
         assertArrayEquals(splitResult2, split2.toArray());
+    }
+
+    @Test
+    public void testProparoxitona(){
+        Syllable s = new Syllable();
+
+        ArrayList<String> split = s.word2syllables("própio");
+        String[] splitResult = {"pró","pi","o"};
+
+        assertArrayEquals(splitResult, split.toArray());
     }
 }

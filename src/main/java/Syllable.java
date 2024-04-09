@@ -139,7 +139,8 @@ public class Syllable {
 				// colocam i e u como semivogais e nao como vogais
 				if (w.charAt(i) == 'i' || w.charAt(i) == 'u'){
 					if (i + 1 < wlen){
-						if (w.charAt(i) == 'i' && w.charAt(i + 1) == 'a' && i+2>= wlen){
+						// casos de ditongos crescentes finais 'ia' ou 'io'
+						if (w.charAt(i) == 'i' && (w.charAt(i + 1) == 'a' || w.charAt(i + 1) == 'o') && i+2>= wlen){
 							return true;
 						}
 					    else if (this.vogal_set.contains(w.charAt(i + 1))){
